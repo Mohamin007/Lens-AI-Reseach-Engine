@@ -6,7 +6,7 @@
 
 ---
 
-## What is Lens?
+## What is Lens?https://github.com/Mohamin007/Lens-AI-Reseach-Engine/settings
 
 Lens is a multi-agent research engine built for the Cursor Hackathon Kashmir 2026. Instead of giving you a simple AI-generated answer, Lens deploys 3 specialized agents that work together to deliver deep, sourced, and synthesized research reports.
 
@@ -106,7 +106,7 @@ NIT Srinagar, Kashmir, India
 
 ## Developer
 
-**Mohamim Mushtaq Mir**
+**Mohamin Mushtaq Mir**
 
 ---
 
