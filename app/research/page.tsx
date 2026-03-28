@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { Header } from '@/components/Header';
 import { AgentCard } from '@/components/AgentCard';
@@ -129,7 +129,7 @@ function DeepSpaceBackground() {
   );
 }
 
-export default function ResearchPage() {
+function ResearchPageInner() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const query = searchParams.get('q') || 'default research query';
@@ -330,5 +330,19 @@ export default function ResearchPage() {
         ) : null}
       </main>
     </div>
+  );
+}
+
+export default function ResearchPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="flex min-h-screen items-center justify-center bg-black text-white">
+          Loading...
+        </div>
+      }
+    >
+      <ResearchPageInner />
+    </Suspense>
   );
 }
